@@ -1,0 +1,22 @@
+<mat-card >
+
+    <mat-horizontal-stepper [linear]="false" #stepper>
+        <mat-step label="Create client">
+            <app-client></app-client>
+        </mat-step>
+        <mat-step label="Create product">
+            <app-product></app-product>
+        </mat-step>
+        <mat-step label="Create sale">
+            <app-sale></app-sale>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <app-base></app-base>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</mat-card>

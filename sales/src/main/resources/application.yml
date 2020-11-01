@@ -1,0 +1,19 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+  datasource:
+    password: cri123456789
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/sales
+    username: postgres
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+server:
+  port: 20002

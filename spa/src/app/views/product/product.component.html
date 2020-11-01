@@ -1,0 +1,16 @@
+<h3> Product</h3>
+<form [formGroup]="this.productService.productForm">
+<div class="example-container">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" type="text"class="example-right-align">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Value</mat-label>
+        <input matInput formControlName="value" type="number" class="example-right-align">
+    </mat-form-field>
+</div>
+</form>
+
+<button mat-raised-button color="primary"(click)="Create()">save</button>
